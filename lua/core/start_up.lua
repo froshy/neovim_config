@@ -1,2 +1,4 @@
 -- Set line numbers
-return vim.api.nvim_command("set number")
+vim.cmd("set number")
+-- No swap file
+vim.cmd("set noswapfile")

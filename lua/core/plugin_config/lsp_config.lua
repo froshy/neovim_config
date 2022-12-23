@@ -1,4 +1,4 @@
-    require('mason').setup()
+require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = {
     "sumneko_lua",
@@ -7,6 +7,7 @@ require('mason-lspconfig').setup({
     --  "tsserver",
     "ocamllsp",
     "pyright",
+    "jdtls",
   },
 
   automatic_installation = true,
@@ -15,7 +16,7 @@ require('mason-lspconfig').setup({
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local on_attach = function(client, bufnr)
   -- Enable reformat on save
-    require('lsp-format').on_attach(client)
+  require('lsp-format').on_attach(client)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -58,6 +59,10 @@ require("lspconfig").ocamllsp.setup {
   capabilities = capabilities,
 }
 require("lspconfig").pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+require("lspconfig").jdtls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }

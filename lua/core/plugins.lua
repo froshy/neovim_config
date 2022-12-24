@@ -44,6 +44,15 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   -- diff-view
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- startup dashboard
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("indent_blankline").setup { filetype_exclude = { "dashboard" }
+      }
+    end
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end

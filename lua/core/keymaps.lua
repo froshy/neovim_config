@@ -16,7 +16,9 @@ vim.opt.expandtab = true
 
 -- <space h > for clear command
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
--- <shift h/l to swtich buffers
+-- <shift h/l> to switch buffers
 vim.keymap.set('n', '<S-h>', ':bp<CR>')
 vim.keymap.set('n', '<S-l>', ':bn<CR>')
 vim.keymap.set('n', '<leader>q', ':bd#<bar>bn<CR>')
+-- save map
+vim.keymap.set('n', '<C-s>', ':w<CR>')

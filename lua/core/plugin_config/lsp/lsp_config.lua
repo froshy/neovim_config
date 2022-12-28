@@ -3,8 +3,8 @@ require('mason-lspconfig').setup({
   ensure_installed = {
     "sumneko_lua",
     "clangd",
-    --  "hls",
-    --  "tsserver",
+    -- "hls",
+    "tsserver",
     "ocamllsp",
     "pyright",
     "jdtls",
@@ -48,12 +48,14 @@ require("lspconfig").clangd.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
---require("lspconfig").hls.setup {
---  on_attach = on_attach
---}
---require("lspconfig").tsserver.setup {
---  on_attach = on_attach
---}
+-- require("lspconfig").hls.setup {
+-- on_attach = on_attach,
+-- capabilities = capabilities,
+-- }
+require("lspconfig").tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 require("lspconfig").ocamllsp.setup {
   on_attach = on_attach,
   capabilities = capabilities,

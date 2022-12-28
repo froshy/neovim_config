@@ -29,15 +29,12 @@ return require('packer').startup(function(use)
     tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  -- completion
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'L3MON4D3/Luasnip'
+
+  use "nvim-telescope/telescope-file-browser.nvim"
   -- indentation lines
   use 'lukas-reineke/indent-blankline.nvim'
   -- bar/tabs
   use { 'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'nvim-tree/nvim-web-devicons' }
-  --  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
   -- autoformat on save
   use 'lukas-reineke/lsp-format.nvim'
   -- git-sign
@@ -45,14 +42,41 @@ return require('packer').startup(function(use)
   -- diff-view
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- startup dashboard
-  use {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("indent_blankline").setup { filetype_exclude = { "dashboard" }
-      }
-    end
-  }
+  use 'glepnir/dashboard-nvim'
 
+  use 'terrortylor/nvim-comment'
+  -- testing
+  use 'mfussenegger/nvim-dap'
+  -- integrated terminal
+  use { 'akinsho/toggleterm.nvim', tag = '*' }
+  -- leap
+  use 'ggandor/leap.nvim'
+  -- autopairs
+  use 'windwp/nvim-autopairs'
+  -- project management
+  use 'ahmedkhalf/project.nvim'
+  -- vimilluminate
+  use 'RRethy/vim-illuminate'
+  -- todo comments
+  use 'folke/todo-comments.nvim'
+  -- minimap
+  use 'echasnovski/mini.map'
+  -- trouble.nvim
+  use 'folke/trouble.nvim'
+
+  -- LSP configurations
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/Luasnip'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'onsails/lspkind.nvim'
+  use 'glepnir/lspsaga.nvim'
+  use 'hrsh7th/cmp-cmdline'
+  -- smooth scrolling
+  use 'karb94/neoscroll.nvim'
   if packer_bootstrap then
     require('packer').sync()
   end

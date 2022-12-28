@@ -1,0 +1,6 @@
+require('core.plugin_config.lsp.completions')
+require('core.plugin_config.lsp.lsp_config')
+require('core.plugin_config.lsp.treesitter')
+require('core.plugin_config.lsp.trouble')
+require('core.plugin_config.lsp.lspkind')
+require('core.plugin_config.lsp.lspsaga')

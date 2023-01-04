@@ -14,7 +14,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
-  use 'ellisonleao/gruvbox.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -50,7 +49,10 @@ return require('packer').startup(function(use)
   -- integrated terminal
   use { 'akinsho/toggleterm.nvim', tag = '*' }
   -- leap
-  use 'ggandor/leap.nvim'
+  use { 'ggandor/leap.nvim', branch = 'v2' }
+  -- use 'phaazon/hop.nvim'
+  -- use 'ggandor/lightspeed.nvim'
+  --
   -- autopairs
   use 'windwp/nvim-autopairs'
   -- project management
@@ -77,6 +79,11 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   -- smooth scrolling
   use 'karb94/neoscroll.nvim'
+
+  -- colorschemes
+  use 'marko-cerovac/material.nvim'
+  use 'luisiacc/gruvbox-baby'
+  use 'ellisonleao/gruvbox.nvim'
   if packer_bootstrap then
     require('packer').sync()
   end

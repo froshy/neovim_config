@@ -84,6 +84,10 @@ return require('packer').startup(function(use)
   use 'marko-cerovac/material.nvim'
   use 'luisiacc/gruvbox-baby'
   use 'ellisonleao/gruvbox.nvim'
+
+  -- color parenthesis
+  use 'p00f/nvim-ts-rainbow'
+
   if packer_bootstrap then
     require('packer').sync()
   end

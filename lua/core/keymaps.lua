@@ -22,7 +22,7 @@ vim.keymap.set('n', '<S-l>', ':bn<CR>')
 vim.keymap.set('n', '<leader>q', ':bd#<bar>bn<CR>')
 -- save map
 vim.keymap.set('n', '<C-s>', ':w<CR>')
-vim.keymap.set('i', '<C-s>', '<C-o>:w<CR>')
+vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
 
 
 -- diagnostics

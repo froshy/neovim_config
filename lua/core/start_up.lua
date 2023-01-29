@@ -11,3 +11,4 @@ vim.o.updatetime = 250
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h12" }
 vim.opt.fillchars:append { vert = " " }
+vim.cmd("set clipboard+=unnamedplus")
